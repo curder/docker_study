@@ -9,3 +9,7 @@
 
 下载好之后双击 `Docker for Windows Installer.exe` 开始安装。
 
+
+## 运行
+
+在 Windows 搜索栏输入 `Docker` 点击 `Docker for Windows` 开始运行。
