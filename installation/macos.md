@@ -51,3 +51,5 @@ docker run -d -p 1111:80 --name webserver nginx
 docker stop webserver
 doker rm webserver
 ```
+
+至此，MacOS上安装Docker for Mac就全部完成。
