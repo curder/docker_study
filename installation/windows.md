@@ -18,3 +18,6 @@
 
 并在等待片刻，点击 Got it 开始使用 Docker CE。
 
+## 参考资料
+
+[Install Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
