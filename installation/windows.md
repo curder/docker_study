@@ -13,3 +13,8 @@
 ## 运行
 
 在 Windows 搜索栏输入 `Docker` 点击 `Docker for Windows` 开始运行。
+
+随后，Docker CE 启动之后会在 Windows 任务栏出现鲸鱼图标。
+
+并在等待片刻，点击 Got it 开始使用 Docker CE。
+
