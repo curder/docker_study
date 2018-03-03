@@ -16,9 +16,10 @@ docker top [OPTIONS] CONTAINER [ps OPTIONS]
 - 查看容器`mynginx`的进程信息。
 
 ```
-~ docker top mynginx
-UID    PID    PPID    C      STIME   TTY  TIME       CMD
-999    40347  40331   18     00:58   ?    00:00:02   mysqld
+➜  ~ docker top 3294f2a0efce
+PID                 USER                TIME                COMMAND
+2519                0                   0:00                nginx: master process nginx -g daemon off;
+2551                101                 0:00                nginx: worker process
 ```
 
 - 查看所有运行容器的进程信息。
