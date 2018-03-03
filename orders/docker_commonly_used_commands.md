@@ -71,3 +71,138 @@ docker自动映射暴露端口
 `--net=container:NAME_or_ID` 使用其他容器的网路，共享IP和PORT等网络资源
 `--net=none` 容器使用自己的网络（类似--net=bridge），但是不进行配置
 
+## docker stop
+
+
+关闭运行中的容器
+
+```
+docker stop 容器ID
+```
+
+
+## docker start
+
+启动一个已经停止的容器
+
+```
+docker start 容器ID
+```
+
+
+重启一个容器
+
+```
+docker restart 容器ID
+```
+
+
+## docker attach
+
+进入一个运行中的容器
+
+
+```
+docker attach 容器ID
+```
+
+## docker ps
+
+显示全部容器
+
+```
+docker ps -a
+```
+
+
+显示当前运行的容器
+
+```
+docker ps
+```
+
+
+## docker images
+
+查看本地镜像
+
+```
+docker images
+```
+
+## docker rmi
+
+删除所有镜像
+
+```
+docker rmi $(docker images | grep -v RESPOSITORY | awk '{print $3}')
+```
+
+docker build
+
+构建容器
+
+`docker build -t 镜像名称 .`
+
+> 注意：后面的`.`指的是当前文件夹 (其实是Dockerfile存放的文件夹)
+
+
+建立映像文件
+
+```
+docker build --rm=true -t loen/lamp .
+```
+> `–rm`选项是告诉Docker，在构建完成后删除临时的Container，Dockerfile的每一行指令都会创建一个临时的Container，一般这些临时生成的Container是不需要的。
+
+## docker rm
+
+删除容器
+
+```
+docker rm 容器ID
+```
+
+删除所有容器
+
+```
+docker rm $(docker ps -a) 
+```
+
+
+## docker history
+
+查看历史
+
+```
+docker history 镜像ID
+```
+
+
+## docker export
+
+导出容器
+
+```
+docker export 容器ID > xxx.tar
+```
+
+## docker save
+
+把 mynewimage 镜像保存成 tar 文件
+
+```
+docker save myimage | bzip2 -9 -c> /home/save.tar.bz2
+```
+
+## docker load
+
+加载 myimage 镜像
+
+```
+bzip2 -d -c < /home/save.tar.bz2 | docker load
+```
+
+
+
+
+
