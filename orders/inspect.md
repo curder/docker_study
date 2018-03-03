@@ -22,7 +22,7 @@ docker inspect [OPTIONS] CONTAINER|IMAGE [CONTAINER|IMAGE...]
 - 获取镜像`mysql:5.7`的元信息
 
 ```
-docker inspect mysql:5.7
+➜  ~ docker inspect mysql:5.7
 [
     {
         "Id": "sha256:f008d8ff927dc527c5a57251b45cead7c9259c16a6a93c144f397eaafc103d36",
@@ -53,5 +53,6 @@ docker inspect mysql:5.7
 - 获取正在运行的容器mymysql的 IP
 
 ```
-docker inspect -f '{{.NetworkSettings.IPAddress}}' mymysql
+➜  ~ docker inspect -f "{{.NetworkSettings.IPAddress}}" mynginx
+172.17.0.2
 ```
