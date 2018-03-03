@@ -3,11 +3,8 @@
 
 ## docker run
 
+### 命令的格式
 ```
-# 运行一个容器
-docker run -it -p 8088:8088 -p 8089:8089 -p 8090:9090 -v /root/soft/docker:/root/soft/docker -v /root/soft/dockertt:/root/soft/dockertt loen/rc /bin/bash
-
-命令的格式：
 Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 -a, --attach=[] 登录容器（以docker run -d启动的容器）
 -c, --cpu-shares=0 设置容器CPU权重，在CPU共享场景使用
@@ -41,6 +38,13 @@ Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 -v, --volume=[] 给容器挂载存储卷，挂载到容器的某个目录
 --volumes-from=[] 给容器挂载其他容器上的卷，挂载到容器的某个目录
 -w, --workdir="" 指定容器的工作目录
+```
+
+### 使用示例
+
+```
+docker run -it -p 8088:8088 -p 8089:8089 -p 8090:9090 -v /root/soft/docker:/root/soft/docker -v /root/soft/dockertt:/root/soft/dockertt loen/rc /bin/bash
+
 ```
 
 ### 端口暴露
