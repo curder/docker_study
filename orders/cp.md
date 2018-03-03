@@ -36,5 +36,5 @@ docker cp /Users/luo/docker 3294f2a0efce:/www
 - 将容器`3294f2a0efce`的`/www`目录拷贝到主机的`/tmp`目录中。
 
 ```
-docker cp  3294f2a0efce:/www /tmp/
+docker cp 3294f2a0efce:/www /tmp/
 ```
