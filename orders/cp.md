@@ -16,7 +16,7 @@ docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
 
 参数 | 说明
 - | -
--L | 保持源目标中的链接
+`-L` | 保持源目标中的链接
 
 
 ## 实例
