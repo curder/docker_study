@@ -1,6 +1,8 @@
 # Docker version 命令
 
-docker version :显示 Docker 版本信息。
+
+显示 Docker 版本信息。
+
 
 ## 语法
 
