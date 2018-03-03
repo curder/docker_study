@@ -30,7 +30,7 @@ docker rm -f db01、db02
 docker rm -l db 
 ```
 
-- 删除容器mynginx,并删除容器挂载的数据卷
+- 删除容器mynginx，并删除容器挂载的数据卷
 
 ```
 docker rm -v mynginx
