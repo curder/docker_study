@@ -10,12 +10,16 @@ docker kill [OPTIONS] CONTAINER [CONTAINER...]
 
 ## 参数说明
 
-
+参数 | 说明
+- | -
 -s | 向容器发送一个信号
 
 
-实例
-杀掉运行中的容器mynginx
+## 实例
 
-w3cschool@w3cschool:~$ docker kill -s KILL mynginx
+杀掉运行中的容器`mynginx`
+
+```
+$ docker kill -s KILL mynginx
 mynginx
+```
