@@ -10,7 +10,9 @@
 * [Docker命令大全](orders/README.md)
      
     * [run](/orders/run.md)
-    * [start/stop/restart](/orders/start_stop_restart.md)
+    * [start](/orders/start.md)
+    * [stop](/orders/stop.md)
+    * [restart](/orders/restart.md)
     * [kill](/orders/kill.md)
     * [rm](/orders/rm.md)
     * [pause/unpause](/orders/pause_unpause.md)
