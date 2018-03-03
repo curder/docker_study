@@ -11,7 +11,8 @@ docker diff [OPTIONS] CONTAINER
 
 ## 实例
 
-- 查看容器mymysql的文件结构更改
+- 查看容器mynginx
+的文件结构更改
 
 ```
 ➜  ~ docker diff mynginx
