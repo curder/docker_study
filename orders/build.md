@@ -37,7 +37,7 @@ docker build [OPTIONS] PATH | URL | -
 - 使用当前目录的Dockerfile创建镜像。
 
 ```
-docker build -t w3cschool/ubuntu:v1 . 
+docker build -t luo/ubuntu:v1 . 
 ```
 
 - 使用URL `github.com/creack/docker-firefox` 的 Dockerfile 创建镜像。
