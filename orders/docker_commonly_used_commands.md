@@ -78,7 +78,7 @@ docker自动映射暴露端口
 ## docker stop
 
 
-关闭运行中的容器
+- 关闭运行中的容器
 
 ```
 docker stop 容器ID
@@ -87,14 +87,14 @@ docker stop 容器ID
 
 ## docker start
 
-启动一个已经停止的容器
+- 启动一个已经停止的容器
 
 ```
 docker start 容器ID
 ```
 
 
-重启一个容器
+- 重启一个容器
 
 ```
 docker restart 容器ID
@@ -103,7 +103,7 @@ docker restart 容器ID
 
 ## docker attach
 
-进入一个运行中的容器
+- 进入一个运行中的容器
 
 
 ```
@@ -112,14 +112,14 @@ docker attach 容器ID
 
 ## docker ps
 
-显示全部容器
+- 显示全部容器
 
 ```
 docker ps -a
 ```
 
 
-显示当前运行的容器
+- 显示当前运行的容器
 
 ```
 docker ps
@@ -128,7 +128,7 @@ docker ps
 
 ## docker images
 
-查看本地镜像
+- 查看本地镜像
 
 ```
 docker images
@@ -136,22 +136,22 @@ docker images
 
 ## docker rmi
 
-删除所有镜像
+- 删除所有镜像
 
 ```
 docker rmi $(docker images | grep -v RESPOSITORY | awk '{print $3}')
 ```
 
-docker build
+## docker build
 
-构建容器
+- 构建容器
 
 `docker build -t 镜像名称 .`
 
 > 注意：后面的`.`指的是当前文件夹 (其实是Dockerfile存放的文件夹)
 
 
-建立映像文件
+- 建立映像文件
 
 ```
 docker build --rm=true -t loen/lamp .
@@ -160,13 +160,13 @@ docker build --rm=true -t loen/lamp .
 
 ## docker rm
 
-删除容器
+- 删除容器
 
 ```
 docker rm 容器ID
 ```
 
-删除所有容器
+- 删除所有容器
 
 ```
 docker rm $(docker ps -a) 
@@ -175,7 +175,7 @@ docker rm $(docker ps -a)
 
 ## docker history
 
-查看历史
+- 查看历史
 
 ```
 docker history 镜像ID
@@ -184,7 +184,7 @@ docker history 镜像ID
 
 ## docker export
 
-导出容器
+- 导出容器
 
 ```
 docker export 容器ID > xxx.tar
@@ -192,19 +192,24 @@ docker export 容器ID > xxx.tar
 
 ## docker save
 
-把 mynewimage 镜像保存成 tar 文件
+- 打包
 
 ```
 docker save myimage | bzip2 -9 -c> /home/save.tar.bz2
 ```
 
+> 把 mynewimage 镜像保存成 tar 文件
+
+
 ## docker load
 
-加载 myimage 镜像
+- 加载
 
 ```
 bzip2 -d -c < /home/save.tar.bz2 | docker load
 ```
+
+> 加载 myimage 镜像
 
 
 
