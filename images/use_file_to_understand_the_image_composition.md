@@ -6,12 +6,9 @@
 
 比如无法重复的问题、镜像构建透明性的问题、体积的问题就都会解决。这个脚本就是 `Dockerfile`。
 
-
-`Dockerfile` 是一个文本文件，其内包含了一条条的指令(**Instruction**)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
-
+`Dockerfile` 是一个文本文件，其内包含了一条条的指令\(**Instruction**\)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
 
 还以之前使用`docker commit`定制 `nginx` 镜像为例，这次我们使用 `Dockerfile` 来定制。
-
 
 ## 新建`Dockerfile`
 
@@ -55,6 +52,11 @@ Successfully tagged nginx:v3
 
 在这里我们指定了最终镜像的名称 `-t nginx:v3`，构建成功后，我们可以像使用`docker commit`运行 `nginx:v2` 那样来运行这个镜像，其结果会和 `nginx:v2` 一样。
 
+这里使用了`docker build`命令进行镜像构建。其格式为：
+
+```
+docker build [选项] <上下文路径/URL/->
+```
 
 ## 运行镜像
 
@@ -78,3 +80,4 @@ a84759fc3b4afe07cec9258f5e880f4e2d4e6bdc2d99bf96bbeb1fc3a9da33d1
 使用`http://localhost:8890`访问运行中的`nginx:v3`容器。
 
 ![](/assets/nginx-modify-welcome-page-hello-docker-from-dockerfile.png)
+

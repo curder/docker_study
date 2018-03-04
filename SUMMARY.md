@@ -4,7 +4,25 @@
     * [MacOS](installation/macos.md)
     * [Windows PC](installation/windows.md)
     * [CentOS](installation/centos.md)
-
+* [利用 commit 理解镜像构成](images/use_commit_to_understand_the_image_composition.md)
+* [使用 Dockerfile 定制镜像](images/use_file_to_understand_the_image_composition.md)
+* [Dockerfile指令](dockerfile/README.md)
+    
+    * [FROM 指定基础镜像](dockerfile/from.md)
+    * [RUN 执行命令](dockerfile/run.md)
+    * [COPY 复制文件](dockerfile/copy.md)
+    * [ADD 更高级的复制文件](dockerfile/add.md)
+    * [CMD 启动容器命令](dockerfile/cmd.md)
+    * [ENTRYPOINT 入口点](dockerfile/entrypoint.md)
+    * [ENV 环境变量设置](dockerfile/env.md)
+    * [ARG 构建参数](dockerfile/arg.md)    
+    * [VOLUME 定义匿名卷](dockerfile/volume.md)
+    * [EXPOSE 暴露端口](dockerfile/expose.md)
+    * [WORKDIR 指定工作目录](dockerfile/workdir.md)
+    * [USER 指定当前用户](dockerfile/user.md)
+    * [HEALTHCHECK 健康检查](dockerfile/healthcheck.md)
+    * [ONBUILD 为他人做嫁衣](dockerfile/onbuild.md)
+        
 * [Docker 常用命令](orders/docker_commonly_used_commands.md)
 
 * [Docker命令大全](orders/README.md)
