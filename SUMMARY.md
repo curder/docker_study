@@ -51,6 +51,7 @@
     * [inspect 获取容器/镜像的元数据](/orders/inspect.md)
     * [top 查看容器中运行的进程信息](/orders/top.md)
     * [attach 连接到正在运行中的容器](/orders/attach.md)
+    * [exec 在运行的容器中执行命令](/orders/exec.md)
     * [events 从服务器获取实时事件](/orders/events.md)
     * [logs 获取容器的日志](/orders/logs.md)
     * [wait 阻塞运行直到容器停止，然后打印出它的退出代码](/orders/wait.md)
