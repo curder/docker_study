@@ -30,6 +30,7 @@ CMD [ "curl", "-s", "http://ip.cn" ]
 ➜  ~ docker run myip
 当前 IP：223.72.65.97 来自：北京市 移动
 ```
+
 这么看起来好像可以直接把镜像当做命令使用了，不过命令总有参数，如果我们希望加参数呢？比如从上面的 `CMD` 中可以看到实质的命令是 `curl`，那么如果我们希望显示 `HTTP` 头信息，就需要加上 `-i` 参数。那么我们可以直接加 `-i` 参数给 `docker run myip` 么？
 
 ```
@@ -75,10 +76,7 @@ CF-RAY: 3f643466b1328839-HKG
 
 可以看到，这次成功了。这是因为当存在 `ENTRYPOINT` 后，`CMD` 的内容将会作为参数传给 `ENTRYPOINT`，而这里 `-i` 就是新的 `CMD`，因此会作为参数传给 `curl`，从而达到了我们预期的效果。
 
-
-
 ## 场景二：应用运行前的准备工作
-
 
 启动容器就是启动主进程，但有些时候，启动主进程前，需要一些准备工作。
 
@@ -87,7 +85,6 @@ CF-RAY: 3f643466b1328839-HKG
 此外，可能希望避免使用 `root` 用户去启动服务，从而提高安全性，而在启动服务前还需要以 `root` 身份执行一些必要的准备工作，最后切换到服务用户身份启动服务。或者除了服务外，其它命令依旧可以使用 `root` 身份执行，方便调试等。
 
 这些准备工作是和容器 `CMD` 无关的，无论 `CMD` 为什么，都需要事先进行一个预处理的工作。这种情况下，可以写一个脚本，然后放入 `ENTRYPOINT` 中去执行，而这个脚本会将接到的参数（也就是 `<CMD>`）作为命令，在脚本最后执行。比如官方镜像 `redis` 中就是这么做的：
-
 
 ```
 FROM alpine:3.4
@@ -99,19 +96,18 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 EXPOSE 6379
 CMD [ "redis-server" ]
 ```
+
 可以看到其中为了 `redis` 服务创建了 `redis` 用户，并在最后指定了 `ENTRYPOINT` 为 `docker-entrypoint.sh` 脚本。
 
-```
-#!/bin/sh
-...
-# allow the container to be started with `--user`
-if [ "$1" = 'redis-server' -a "$(id -u)" = '0' ]; then
-    chown -R redis .
-    exec su-exec redis "$0" "$@"
-fi
+    #!/bin/sh
+    ...
+    # allow the container to be started with `--user`
+    if [ "$1" = 'redis-server' -a "$(id -u)" = '0' ]; then
+        chown -R redis .
+        exec su-exec redis "$0" "$@"
+    fi
 
-exec "$@"
-```
+    exec "$@"
 
 该脚本的内容就是根据 `CMD` 的内容来判断，如果是 `redis-server` 的话，则切换到 `redis` 用户身份启动服务器，否则依旧使用 `root` 身份执行。比如：
 
@@ -119,3 +115,6 @@ exec "$@"
 $ docker run -it redis id
 uid=0(root) gid=0(root) groups=0(root)
 ```
+
+
+
