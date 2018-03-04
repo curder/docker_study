@@ -2,7 +2,9 @@
 
 在使用 `-d` 参数时，容器启动后会进入后台。
 
-某些时候需要进入容器进行操作，包括使用 [`docker attach`](/orders/attach.md) 命令或 [`docker exec`](/orders/exec.md) 命令，推荐大家使用 `docker exec` 命令，原因会在下面说明。
+某些时候需要进入容器进行操作，包括使用 [`docker attach`](/orders/attach.md) 命令或 [`docker exec`](/orders/exec.md) 命令。
+
+> 推荐大家使用 `docker exec` 命令，原因会在下面说明。
 
 ## `attach` 命令
 
