@@ -54,3 +54,27 @@ Successfully tagged nginx:v3
 在 Step 2 中，如同我们之前所说的那样，RUN 指令启动了一个容器 c9c9fca75e0f，执行了所要求的命令，并最后提交了这一层 579738872a32，随后删除了所用到的这个容器 c9c9fca75e0f。
 
 在这里我们指定了最终镜像的名称 `-t nginx:v3`，构建成功后，我们可以像使用`docker commit`运行 `nginx:v2` 那样来运行这个镜像，其结果会和 `nginx:v2` 一样。
+
+
+## 运行镜像
+
+使用`docker images nginx`查看所有`nginx`相关的镜像，并运行`nginx:v3`这个我们使用`Dockerfile`文件构建出来的目标镜像。
+
+```
+➜  mynginx docker images nginx
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               v3                  579738872a32        2 minutes ago       108MB
+nginx               v2                  c82ebcae988f        21 minutes ago      108MB
+nginx               latest              3f8a4339aadd        2 months ago        108MB
+➜  mynginx docker run --name webserver3 -d -p 8890:80 nginx:v3
+a84759fc3b4afe07cec9258f5e880f4e2d4e6bdc2d99bf96bbeb1fc3a9da33d1
+➜  mynginx
+```
+
+> 映射容器端口 `80` 端口，到本地主机的`8890`端口。
+
+## 访问结果
+
+使用`http://localhost:8890`访问运行中的`nginx:v3`容器。
+
+![](/assets/nginx-modify-welcome-page-hello-docker-from-dockerfile.png)
