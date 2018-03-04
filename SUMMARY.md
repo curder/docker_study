@@ -27,10 +27,10 @@
 
 * [Docker命令大全](orders/README.md)
      
-    * [run](/orders/run.md)
-    * [start](/orders/start.md)
-    * [stop](/orders/stop.md)
-    * [restart](/orders/restart.md)
+    * [run 创建新容器并运行](/orders/run.md)
+    * [start 启动被停掉的容器](/orders/start.md)
+    * [stop 停止正在运行的容器](/orders/stop.md)
+    * [restart 重启容器](/orders/restart.md)
     * [kill](/orders/kill.md)
     * [rm](/orders/rm.md)
     * [pause/unpause](/orders/pause_unpause.md)
