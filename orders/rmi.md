@@ -16,8 +16,20 @@ docker rmi [OPTIONS] IMAGE [IMAGE...]
 
 ## 实例
 
-强制删除本地镜像`ubuntu:latest`
+- 强制删除本地镜像`ubuntu:latest`
 
 ```
 docker rmi -f ubuntu:latest
+```
+
+-  要删除所有仓库名为 `redis` 的镜像
+
+```
+docker rmi $(docker image ls -q redis)
+```
+
+- 删除所有在 `mongo:3.2` 之前的镜像
+
+```
+docker rmi $(docker image ls -q -f before=mongo:3.2)
 ```
