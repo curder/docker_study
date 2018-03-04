@@ -38,7 +38,7 @@ RUN make -C /usr/src/redis install
 
 > Union FS 是有最大层数限制的，比如 AUFS，曾经是最大不得超过 42 层，现在是不得超过 127 层。
 
-上面的 Dockerfile 正确的写法应该是这样：
+上面的 `Dockerfile` 正确的写法应该是这样：
 
 ```
 FROM debian:jessie
