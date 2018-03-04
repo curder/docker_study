@@ -34,8 +34,8 @@
     * [kill 杀掉运行中的容器](/orders/kill.md)
     * [rm 删除容器](/orders/rm.md)
     * [pause/unpause 暂停或恢复容器中的进程](/orders/pause_unpause.md)
-    * [create ](/orders/create.md)
-    * [exec](/orders/exec.md)
+    * [create 创建一个新的容器但不启动它](/orders/create.md)
+    * [exec ](/orders/exec.md)
     
     * [ps](/orders/ps.md)
     * [inspect](/orders/inspect.md)
