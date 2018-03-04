@@ -6,7 +6,9 @@
 命令 | 作用
 - | -
 [run](/orders/run.md) | 创建一个新的容器并运行一个命令
-[start/stop/restart](/orders/start_stop_restart.md) | 启动、关闭或者重启一个容器
+[start](/orders/start.md) | 启动一个容器
+[stop](/orders/stop.md) | 关闭一个容器
+[restart](/orders/restart.md) | 重启一个容器
 [kill](/orders/kill.md) | 杀掉一个运行中的容器
 [rm](/orders/rm.md) | 删除一个或多少容器
 [pause/unpause](/orders/pause_unpause.md) | 暂停、恢复容器中所有的进程
