@@ -1,7 +1,7 @@
 # Docker logout 命令
 
 
-登陆到一个Docker镜像仓库，如果未指定镜像仓库地址，默认为官方仓库 Docker Hub
+退出登录到一个Docker镜像仓库，如果未指定镜像仓库地址，默认为官方仓库 Docker Hub
 
 ## 语法
 
