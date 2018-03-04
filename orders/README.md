@@ -22,6 +22,7 @@
 | [inspect](/orders/inspect.md) | 获取容器/镜像的元数据 |
 | [top](/orders/top.md) | 查看容器中运行的进程信息，支持 ps 命令参数。 |
 | [attach](/orders/attach.md) | 连接到正在运行中的容器 |
+| [exec](/orders/exec.md)| 连接到正在运行中的容器 |
 | [events](/orders/events.md) | 从服务器获取实时事件 |
 | [logs](/orders/logs.md) | 获取容器的日志 |
 | [wait](/orders/wait.md) | 阻塞运行直到容器停止，然后打印出它的退出代码。 |
