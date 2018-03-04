@@ -31,7 +31,7 @@
     * [终止容器](container/stop.md)
     * [进入容器](container/attach_exec.md)
     * [导入和导出容器](container/import_export.md)
-    * [删除容器()container/rm.md]
+    * [删除容器](container/rm.md)
     
 * [Docker 常用命令](orders/docker_commonly_used_commands.md)
 
