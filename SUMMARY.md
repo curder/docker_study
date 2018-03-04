@@ -33,6 +33,10 @@
     * [导入和导出容器](container/import_export.md)
     * [删除容器](container/rm.md)
     
+* [Docker 数据管理](data_manager.md)
+    * [数据卷](data_management/volume.md)
+    * [监听主机目录](data_management/bind-mounts.md)
+
 * [Docker 常用命令](orders/docker_commonly_used_commands.md)
 
 * [Docker命令大全](orders/README.md)
